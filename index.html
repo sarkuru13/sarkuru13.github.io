@@ -1,54 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kathar Portfolio</title>
-  <link rel="stylesheet" href="style.css"> </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarkuru Engti's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ffc107;
+        }
+    </style>
+</head>
 <body>
-  <header>
-    <h1>Kathar Portfolio</h1>
-  </header>
 
-  <nav>
+<header>
+    <h1>Sarkuru Engti's Portfolio</h1>
+</header>
+
+<nav>
     <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
+</nav>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Write a brief introduction about yourself and your skills here. What kind of work do you do? What are you passionate about?</p>
-    </section>
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am Sarkuru Engti, an engineering student at Tezpur University. I am passionate about technology and innovation.</p>
+    <a href="#contact" class="btn">Contact Me</a>
+</section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>Showcase your projects here. You can include descriptions, images, and links to live demos if applicable.</p>
-      <div class="project-container">
-        <div class="project">
-          <h3>Project Title 1</h3>
-          <img src="image1.jpg" alt="Project 1 Image">
-          <p>A brief description of your project 1.</p>
-          <a href="#">View Demo</a> </div>
-        </div>
-    </section>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        <button type="submit" class="btn">Send</button>
+    </form>
+</section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Provide your contact information here. You can include an email address, social media links, or a contact form.</p>
-      <ul>
-        <li><a href="mailto:youremail@example.com">youremail@example.com</a></li>
-        <li> <a href="#">LinkedIn</a>
-        </li>
-      </ul>
-    </section>
-  </main>
+<footer>
+    <p>&copy; 2024 Sarkuru Engti</p>
+</footer>
 
-  <footer>
-    <p>&copy; <?php echo date("Y"); ?> Kathar Portfolio</p>
-  </footer>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // You can add code here to handle form submission, such as sending an email or storing data in a database
+        alert('Form submitted successfully!');
+    });
+</script>
 </body>
 </html>
